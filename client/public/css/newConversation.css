@@ -1,0 +1,39 @@
+#selectedRecipients {
+  margin-left: 25px;
+  text-align: center;
+  overflow-y: auto;
+  height: calc(70vh - 370px);
+}
+
+#selectedRecipients > div,
+.createNewConversation {
+  color: white;
+  border-radius: 5px;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#selectedRecipients > div {
+  height: 40px;
+  animation: 0.2s ease-out appear;
+  transition: all 0.35s;
+  align-items: center;
+  padding: 0px 15px;
+  margin: 0px 15px 15px 0px;
+  display: inline-flex;
+  position: relative;
+}
+
+#selectedRecipients > div > i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}

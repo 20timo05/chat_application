@@ -1,0 +1,174 @@
+#sideBarWrapper {
+  height: 100vh;
+  width: 450px;
+  margin-top: 2px;
+}
+
+#sideBarWrapper > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: calc(100% - 5px);
+  margin-top: 5px;
+}
+
+.tab {
+  padding: 15px 20px;
+  font-size: 20px;
+
+  color: #3498db;
+  cursor: pointer;
+}
+
+.tabActive {
+  color: black;
+  border: 1px solid black;
+  border-style: solid solid none solid;
+  background-color: white;
+  z-index: 2;
+}
+
+#sideBarWrapper > section {
+  height: 100%;
+}
+
+#sideBarWrapper > section > ul {
+  height: calc(100% - 200px);
+  margin-top: -1px;
+  border: 1px solid black;
+  border-style: solid solid solid none;
+  overflow: hidden;
+}
+
+#sideBarWrapper > section > ul > li {
+  padding: 15px 50px 15px 20px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.listItemActive {
+  background-color: #2980b9;
+  color: white;
+}
+
+#idDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  height: 70px;
+  border: 1px solid black;
+  border-style: none solid none none;
+}
+
+#sideBarWrapper > section > button {
+  height: 70px;
+  width: 100%;
+  border: none;
+  background-color: #2980b9;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#conversationsList > li > section,
+#contactsList > li > section {
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 85px);
+  transform: translate(-100%, -50%);
+  font-size: 20px;
+}
+
+/* Window */
+#createWindow {
+  height: 70vh !important;
+  width: 75vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 5;
+  border-radius: 7px;
+}
+
+#createWindow > header,
+#createWindow > section {
+  padding: 30px 35px;
+  width: calc(100% - 70px);
+  font-size: 20px;
+}
+
+#createWindow > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+}
+
+#createWindow > header > i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#createWindow > section > form > input {
+  margin: 20px 0px 30px;
+  height: 40px;
+  width: 90%;
+  border: 2px solid rgba(200, 200, 200, 1);
+  border-radius: 20px;
+  padding: 0px 20px;
+  font-size: 15px;
+  outline: none;
+}
+
+.createNewConversation {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: #2980b9;
+}
+
+#createWindow > section h1 {
+  display: flex;
+  align-items: center;
+}
+
+.errorMessage {
+  font-size: 15px;
+  color: red;
+  margin-left: 20px;
+  animation: 0.2s ease-out appear;
+  transition: all 0.35s;
+}
+
+@keyframes swiggle {
+  0% {
+    margin-left: -20px;
+  }
+  16.67% {
+    margin-left: 20px;
+  }
+  33.33% {
+    margin-left: -20px;
+  }
+  50% {
+    margin-left: 20px;
+  }
+  66.67% {
+    margin-left: -20px;
+  }
+  83.33% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
